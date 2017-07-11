@@ -18,3 +18,14 @@ How to hook the new show settings event?
 Add option to disable the minimap and/or lines numbers (if actived) when opening the new Settings
 1. https://github.com/evandrocoan/SublimeTextStudio/issues/12
 
+___
+## License
+
+All files in this repository are released under GNU General Public License v3.0
+or the latest version available on http://www.gnu.org/licenses/gpl.html
+
+1. The [LICENSE](LICENSE) file for the GPL v3.0 license
+1. The website https://www.gnu.org/licenses/gpl-3.0.en.html
+
+For more information.
+
