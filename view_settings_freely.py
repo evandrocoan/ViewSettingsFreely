@@ -6,24 +6,27 @@ import sublime_plugin
 
 class SampleListener(sublime_plugin.EventListener):
 
+    def __init__(self):
+        self.is_minimap_visible = False
+
     def on_window_command(self, window, command, args):
-        
+
         # print ("About to execute " + command)
-        
         if command == "edit_settings":
-            
+            self.is_minimap_visible = window.is_minimap_visible()
+
             # print ("EXECUTING...")
-            window.run_command("distraction_free_window")
+            if self.is_minimap_visible:
+                window.run_command("toggle_minimap")
 
 
     def on_post_window_command(self, window, command, args):
-        
-        # print ("Finished executing " + command)
-        
-        if command == "edit_settings":
-            
-            # print ("EXECUTING...")
-            window.run_command("distraction_free_window")
 
+        # print ("Finished executing " + command)
+        if command == "edit_settings":
+
+            # print ("EXECUTING...")
+            if self.is_minimap_visible:
+                window.run_command("toggle_minimap")
 
 
