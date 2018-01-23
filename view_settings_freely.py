@@ -4,9 +4,10 @@ import sublime
 import sublime_plugin
 
 
-class SampleListener(sublime_plugin.EventListener):
+class ViewSettingsFreelyListener(sublime_plugin.EventListener):
 
     def __init__(self):
+        super(ViewSettingsFreelyListener, self).__init__()
         self.is_minimap_visible = False
 
     def on_window_command(self, window, command, args):
